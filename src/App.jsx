@@ -34,7 +34,7 @@ const App = () => {
     setListCount((prev) => {
       return prev + 5 <= showList.length ? prev + 5 : showList.length;
     });
-    console.log(setListCount);
+    // console.log(setListCount);
   };
 
   const hideContent = () => {

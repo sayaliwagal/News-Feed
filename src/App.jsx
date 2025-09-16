@@ -15,7 +15,7 @@ const App = () => {
         "https://jsonplaceholder.typicode.com/posts"
       );
       if (!responce.ok) {
-        throw new error("Failed to load news ...");
+        throw new Error("Failed to load news ...");
       }
       const data = await responce.json();
       setShowList(data);
@@ -47,7 +47,7 @@ const App = () => {
       {/* loading states */}
       {loading && <h1 className="loading">Loading News....!</h1>}
       {/* Error states */}
-      {error && <h1 className="error">Error :{error}</h1>}
+      {error && <h1 className="error">Error :{error.message}</h1>}
       {/*success sate */}
       {!loading &&
         !error &&
